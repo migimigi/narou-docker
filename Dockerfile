@@ -26,7 +26,7 @@ RUN wget http://kindlegen.s3.amazonaws.com/${KINDLEGEN_FILE} && \
     ln -s /opt/kindlegen/kindlegen /opt/AozoraEpub3 && \
     rm ${KINDLEGEN_FILE}
 
-RUN gem install narou
+RUN gem install narou -v 3.0.4
 
 COPY init.sh /usr/local/bin
 
