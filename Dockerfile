@@ -2,6 +2,7 @@ FROM ubuntu:16.04
 ENV LANG ja_JP.UTF-8
 ENV AOZORA_EPUB3_FILE AozoraEpub3-1.1.0b46.zip
 ENV KINDLEGEN_FILE kindlegen_linux_2.6_i386_v2_9.tar.gz
+ENV NAROU_VERSION 3.1.1
 WORKDIR /opt/narou
 
 RUN apt-get update && \
@@ -26,7 +27,7 @@ RUN wget http://kindlegen.s3.amazonaws.com/${KINDLEGEN_FILE} && \
     ln -s /opt/kindlegen/kindlegen /opt/AozoraEpub3 && \
     rm ${KINDLEGEN_FILE}
 
-RUN gem install narou -v 3.0.4
+RUN gem install narou -v ${NAROU_VERSION}
 
 COPY init.sh /usr/local/bin
 
