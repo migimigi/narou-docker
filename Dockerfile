@@ -29,6 +29,7 @@ RUN wget http://kindlegen.s3.amazonaws.com/${KINDLEGEN_FILE} && \
 
 RUN gem install narou -v ${NAROU_VERSION}
 
+RUN (echo ; cat /var/lib/gems/2.3.0/gems/narou-${NAROU_VERSION}/preset/custom_chuki_tag.txt) >> /opt/AozoraEpub3/chuki_tag.txt
 COPY init.sh /usr/local/bin
 
 ENTRYPOINT ["init.sh"]
