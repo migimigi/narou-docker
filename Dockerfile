@@ -9,7 +9,8 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
       openjdk-8-jre-headless \
       ruby \
-      expect \
+      ruby-dev \
+      build-essential \
       wget \
       unzip \
       language-pack-ja && \

@@ -1,12 +1,7 @@
 #!/bin/bash
 
 if [ ! -d "/opt/narou/.narou" ]; then
-  expect -c "
-    spawn narou init
-    expect >
-    send \"/opt/AozoraEpub3\n\"
-    expect eof
-  "
+  narou init -p /opt/AozoraEpub3
   narou setting device=kindle
   narou setting server-bind=*
   mv /root/.narousetting /opt/narou/
