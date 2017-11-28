@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 ENV LANG ja_JP.UTF-8
 ENV AOZORA_EPUB3_FILE AozoraEpub3-1.1.0b46.zip
 ENV KINDLEGEN_FILE kindlegen_linux_2.6_i386_v2_9.tar.gz
-ENV NAROU_VERSION 3.1.9
+ENV NAROU_VERSION 3.1.11
 WORKDIR /opt/narou
 
 RUN apt-get update && \
